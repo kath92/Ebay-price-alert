@@ -33,9 +33,9 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login("katharina.education@gmail.com", "dymacfhabmsbswwt")
+    server.login("katharina.education@gmail.com", "password")
 
-    subject = "Price dropped down!"
+    subject = "Price dropped down! {0}".format(parsed_title)
     body = "Check the eBay link https://www.ebay.co.uk/itm/Inspire-Fitness-CB1-Air-Bike-Exercise-CrossFit-Airdyne-Assault-Bike-Gym-Cardio/401529330033?hash=item5d7d035971:g:weUAAOSwjB9a5B7u"
 
     msg = f"Subject: {subject}\n\n{body}"
